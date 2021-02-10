@@ -27,7 +27,8 @@
     <h1 class="text-xl">Todo List ( {{ countUndone }} )</h1>
     <ul>
       <li v-for="(task,index) in tasks" :class="{done: task.done}">
-        {{task.title}} 
+         <img v-bind:src = "task.Image" width="150" class="rounded-lg"><br>{{task.title}}
+
         <button v-on:click="toggleDone(index)" class="bg-green-500 text-white  py-1 px-2 rounded">
           Done
         </button>
@@ -36,7 +37,7 @@
   </div>
 
   <!-- my main.js -->
-  <script src="./main8.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
